@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://texasprobatedivorce.com/sitemap.xml
