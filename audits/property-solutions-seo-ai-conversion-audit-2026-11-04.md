@@ -39,3 +39,10 @@ Scope: repository-source audit only. No live browser, Search Console performance
 
 ## Publication safety
 This is an audit document only, committed to a separate branch. No production HTML, robots.txt, sitemap.xml, or main-branch content is modified.
+
+## Bing Webmaster Tools homepage inspection (user-reported, 2026-11-04)
+- URL: https://texasprobatedivorce.com/; Bing reports **Indexed successfully** and identifies one JSON-LD `RealEstateAgent` markup type.
+- Bing flags **Title too long** and **Meta Description too long or too short**. The report does not provide Bing's crawled title/description text or last-crawl timestamp, so do not assume the current source caused the alerts.
+- Current repository homepage title: `Texas Probate & Divorce REALTOR® | Lisa Williams` (49 characters). Current meta description: `Sell inherited, probate or divorce-related property in Montgomery, Travis and Galveston Counties, Texas. Get guidance from REALTOR® Lisa Williams.` (approximately 145 characters). Both are plausible search-snippet lengths, though display is pixel-dependent.
+- **Recommended verification:** In Bing URL Inspection, inspect last crawl and Bing's detected title/description; compare with View Source on the live page, then request recrawl only if the crawl is stale. If issues persist after a fresh crawl, test a shorter, distinctive title and a descriptive ~140–155 character summary on this branch before publishing.
+- No production homepage change is warranted solely from these alerts without confirming what Bing crawled.
