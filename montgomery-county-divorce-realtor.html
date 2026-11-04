@@ -275,6 +275,8 @@
 <section class="contact" id="contact"><div class="wrap" style="padding-top:20px;padding-bottom:12px"><a class="btn" href="https://form.jotform.com/262867538347068" target="_blank" rel="noopener noreferrer">Request My Free Property Assessment</a><p style="font-size:14px">Share your property details securely through our inquiry form. No obligation to list.</p></div><div class="wrap"><div class="eyebrow">Confidential, respectful conversation</div><h2>Let's talk about the house and your options.</h2><p class="lead">You don't need every detail settled to ask about the real estate market. We'll start with the property and what you hope to understand.</p><p><strong>Lisa Williams, REALTOR® | eXp Realty, LLC</strong><br>Texas Sales Agent #839506</p><a class="btn" href="tel:+18329489581">Call (832) 948-9581</a><a class="btn" href="mailto:Lisa.D.Williams@ExpRealty.com">Email Lisa</a><a class="btn" href="https://calendly.com/lisaconroe/30min" target="_blank" rel="noopener noreferrer">Schedule a Conversation</a><p>General real estate education only, not legal, tax or financial advice.</p></div></section>
 
 <section class="keyword-resource-section" aria-labelledby="resource-seo-heading" style="padding:48px 0;background:#f7f4ee;color:#27333a"><div style="max-width:1040px;margin:auto;padding:0 24px"><h2 id="resource-seo-heading" style="font-size:clamp(1.5rem,3vw,2rem);line-height:1.3;color:#16232c">Divorce REALTOR® in Conroe and Montgomery County, TX</h2><p>If you're looking for a divorce realtor in Conroe TX or a divorce real estate agent in Montgomery County, a neutral, property-focused sale plan can help clarify pricing, preparation and marketing. Decisions about a jointly owned home should follow applicable agreements and legal advice.</p><p>For a divorce real estate valuation in Montgomery County, Lisa can review local comparable sales and the home's condition. A sale proceeds estimate can support planning, but it does not determine how proceeds will be divided.</p><p><strong>Helpful next steps:</strong> <a href="divorce-real-estate.html" style="color:#66400f;text-decoration:underline">Texas divorce home sale guidance</a> · <a href="seller-net-proceeds-calculator.html" style="color:#66400f;text-decoration:underline">Estimate seller net proceeds</a> · <a href="attorney-referral-portal.html" style="color:#66400f;text-decoration:underline">Refer a divorce-related property matter</a></p></div></section>
+
+<section aria-label="Free property assessment invitation" style="background:#16232c;color:#fff;padding:40px 20px;text-align:center"><div style="max-width:780px;margin:0 auto"><h2 style="color:#fff;margin:0 0 12px;font:normal clamp(1.5rem,3vw,2rem) Georgia,serif">Request a Free Property Assessment</h2><p style="margin:0 auto 22px;line-height:1.65;color:#f7f4ee">Considering selling a Texas home? Share a few property details for a personal follow-up with Lisa Williams, REALTOR®.</p><a data-lead-action="assessment" href="index.html#free-property-assessment" style="display:inline-block;background:#a97d43;color:#fff;text-decoration:none;padding:14px 22px;border-radius:4px;font-weight:700">Request My Free Assessment</a><p style="font-size:13px;margin:15px 0 0;color:#e6dfd5">No obligation to list. Please don't submit confidential legal information.</p></div></section>
 </main></main></main></main>
 
 
@@ -299,5 +301,20 @@
   </div>
 </footer>
 
+
+<script>
+/* Optional analytics events: only emitted to an existing analytics installation.
+   These events represent link clicks, not completed forms or booked appointments. */
+document.addEventListener('click',function(event){
+  var a=event.target.closest('a[href]');if(!a)return;
+  var href=a.getAttribute('href')||'';
+  var kind=a.dataset.leadAction || (/calendly\.com\/lisaconroe\/30min/.test(href)?'appointment':(/^tel:/.test(href)?'phone':(/form\.jotform\.com\/262867538347068/.test(href)?'assessment':null)));
+  if(!kind)return;
+  var eventName=kind==='assessment'?'assessment_link_click':kind==='appointment'?'appointment_link_click':'phone_link_click';
+  var payload={page_path:location.pathname,link_destination:href};
+  if(typeof window.gtag==='function')window.gtag('event',eventName,payload);
+  else if(Array.isArray(window.dataLayer))window.dataLayer.push(Object.assign({event:eventName},payload));
+});
+</script>
 </body>
 </html>
